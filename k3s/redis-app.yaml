@@ -1,4 +1,3 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -49,7 +48,7 @@ metadata:
     kubernetes.io/ingress.class: "traefik"
 spec:
   rules:
-  - host: "www.192.168.1.2.sslip.io"
+  - host: "www.10.10.1.50.sslip.io"
     http:
       paths:
         - path: /
