@@ -71,6 +71,14 @@ pipeline {
                 sh '/usr/local/bin/kubectl apply -f ./k3s/redis-app.yaml'
             }
         }
+
+        stage('Teste da aplicação no k3s') {
+            steps {
+                sh 'sleep 10'
+                sh 'chmod +x teste-k3s.sh'
+                sh './teste-k3s.sh'
+            }
+        }        
         
     }
 
